@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Lovers+Quarrel&family=Orbitron:wght@400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Lovers+Quarrel&family=Orbitron:wght@400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div class="NAme"><a href="#">L.Pate Medical</a></div>
+            <div class="oPtions">
+                <div class="hide"><a href="#" onclick="setActive(this)" class="links">Home</a></div>
+                <div class="hide"><a href="#" onclick="setActive(this)" class="links">About</a></div>
+                <div class="hide"><a href="#" onclick="setActive(this)" class="links">Contact</a></div>
+                <a href="#" class="button1">Call Today</a>
+
+            </div>
+            <div class="menu"><a href="#" onclick="openmenu()"><svg xmlns="http://www.w3.org/2000/svg" height="36px"
+                        viewBox="0 -960 960 960" width="36px" fill="#473243">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></div>
+            <div class="Side">
+                <a href="#" onclick="closemenu()"><svg xmlns="http://www.w3.org/2000/svg" height="50px"
+                        viewBox="0 -960 960 960" width="50px" fill="#473243">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a>
+                <a href="#" onclick="setActive(this)" class="links">Home</a>
+                <a href="#" onclick="setActive(this)" class="links">About</a>
+                <a href="#" onclick="setActive(this)" class="links">Contact</a>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <div class="desc1">
+            <div class="H1">
+                <h1>L.Pate Medical</h1>
+            </div>
+            <div class="P1">
+                <p>Experience a holistic approach to wellness with our comprehensive healthcare services. Schedule a
+                    consultation today.</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        function setActive(el) {
+            document.querySelectorAll('.links').forEach(item =>
+                item.classList.remove('active')
+            );
+            el.classList.add('active');
+        }
+        function openmenu() {
+            const a = document.querySelector(".Side")
+            a.style.display = "flex"
+            a.classList.remove("slideout")
+            a.classList.add("slidein")
+        }
+        function closemenu() {
+            const a = document.querySelector(".Side")
+            a.classList.remove("slidein")
+            a.classList.add("slideout")
+            setTimeout(() => {
+                side.style.display = "none";
+            }, 400);
+        }
+
+
+    </script>
+
 </body>
+
 </html>

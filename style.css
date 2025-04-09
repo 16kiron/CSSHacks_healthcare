@@ -1,0 +1,317 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 103px;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(216, 205, 222);
+}
+
+nav .NAme {
+  max-width: 100%;
+  margin: 0 0 0 60px;
+}
+
+nav .NAme a {
+  text-decoration: none;
+}
+
+nav .oPtions {
+  max-width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  margin: 0 60px 0 0;
+}
+
+nav .oPtions a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  height: 50px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.oPtions .links::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #473243;
+  transition: width 0.2s ease-in;
+}
+
+.oPtions .links:hover::after,
+.oPtions .links.active::after {
+  width: 100%;
+}
+
+.oPtions .button1 {
+  width: 130px;
+  height: 40px;
+  border: 1px solid #473243;
+  background-color: #473243;
+  border-radius: 25px;
+  color: white;
+  padding: 3px;
+}
+
+.oPtions .button1:hover {
+  transition: 0.3s ease;
+  background-color: rgb(216, 205, 222);
+  color: #473243;
+}
+
+.oPtions .button1::after {
+  width: 0%;
+}
+
+.Side {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.258);
+  backdrop-filter: blur(10px);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  box-shadow: -10px 0 10px rgb(155, 155, 155);
+  animation: slideIn 0.4s ease forwards;
+}
+
+.Side a {
+  position: relative;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 50px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.Side a:first-child {
+  padding: 20px;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Side .links::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #473243;
+  transition: width 0.2s ease-in;
+}
+
+.Side .links:hover::after,
+.Side a.links.active::after {
+  width: 100%;
+}
+
+.Side.slidein {
+  animation: open 0.4s ease-in forwards;
+}
+
+.Side.slideout {
+  animation: close 0.4s ease-in forwards;
+}
+
+.menu {
+  display: none;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes close {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+main {
+  width: 85%;
+  height: auto;
+  margin: 5px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.desc1 {
+  padding: 10px 10px;
+  max-width: 450px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.desc1 h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: Libre Baskerville;
+  text-align: center;
+  max-width: 100%;
+}
+
+.desc1 p {
+  font-weight: 200;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  margin: 0.25em 0;
+  width: 100%;
+  text-align: center;
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px) {
+  header {
+    height: 70px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px 0 0;
+  }
+
+  nav .NAme {
+    margin: 0 0 0 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 14px;
+  }
+
+  nav .oPtions {
+    margin: 0;
+  }
+
+  nav .button1 {
+    max-width: 100px;
+    font-size: 14px;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  main .desc1 h1 {
+    font-size: 1.7rem;
+  }
+
+  main .desc1 p {
+    font-size: 1.4rem;
+  }
+}
