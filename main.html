@@ -18,6 +18,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Lovers+Quarrel&family=Orbitron:wght@400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
 
 </head>
 
@@ -51,39 +52,55 @@
     </header>
     <main>
         <div class="desc1">
-            <div class="H1">
-                <h1>L.Pate Medical</h1>
-            </div>
-            <div class="P1">
-                <p>Experience a holistic approach to wellness with our comprehensive healthcare services. Schedule a
-                    consultation today.</p>
-            </div>
+            <h1>L.Pate Medical</h1>
+            <p>Experience a holistic approach to wellness with our comprehensive healthcare services. Schedule a
+                consultation today.</p>
+            <a href="#">Contact</a>
         </div>
     </main>
-    <script>
-        function setActive(el) {
-            document.querySelectorAll('.links').forEach(item =>
-                item.classList.remove('active')
-            );
-            el.classList.add('active');
-        }
-        function openmenu() {
-            const a = document.querySelector(".Side")
-            a.style.display = "flex"
-            a.classList.remove("slideout")
-            a.classList.add("slidein")
-        }
-        function closemenu() {
-            const a = document.querySelector(".Side")
-            a.classList.remove("slidein")
-            a.classList.add("slideout")
-            setTimeout(() => {
-                side.style.display = "none";
-            }, 400);
-        }
-
-
-    </script>
+    <div class="backimg">
+        <img src="background.avif" alt="" class="img1">
+        <svg class="curve" viewBox="0 0 1440 200" preserveAspectRatio="none">
+            <path d="M0,0 C480,200 960,0 1440,200 L1440,0 L0,0 Z" fill="#fff" />
+        </svg>
+    </div>
+    <div class="Part1">
+        <div class="cons1">
+            <div class="sch">
+                <h1>Schedule a Consultation</h1>
+                <p>Contact us for personalized notary services. Fill out the form, and our team will schedule your
+                    consultation promptly.</p>
+            </div>
+        </div>
+        <div class="form1">
+            <form>
+                <div class="firstname apform">
+                    <label for="">First Name *</label>
+                    <input type="text">
+                </div>
+                <div class="lastname apform">
+                    <label for="">Last Name *</label>
+                    <input type="text">
+                </div>
+                <div class="email apform">
+                    <label for="">Email *</label>
+                    <input type="email">
+                </div>
+                <div class="phone apform">
+                    <label for="">Phone </label>
+                    <input type="text">
+                </div>
+                <div class="message apform">
+                    <label for="">Message </label>
+                    <input type="text">
+                </div>
+            </form>
+            <div class="button3">
+                <a href="#">Submit</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 
 </body>
 
