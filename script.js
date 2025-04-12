@@ -4,13 +4,15 @@ function setActive(el) {
     );
     el.classList.add('active');
 }
-function openmenu() {
+function openmenu(event) {
+    event.preventDefault()
     const a = document.querySelector(".Side")
     a.style.display = "flex"
     a.classList.remove("slideout")
     a.classList.add("slidein")
 }
-function closemenu() {
+function closemenu(event) {
+    event.preventDefault()
     const a = document.querySelector(".Side")
     a.classList.remove("slidein")
     a.classList.add("slideout")

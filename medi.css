@@ -172,6 +172,15 @@ main .form2 textarea:focus {
     main .form2 textarea {
         width: 70%;
         min-height: 20px;
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    .report h1{
+        font-size: 2rem;
+    }
+    .report h2{
+        font-size: 1.8rem;
+    }
+    .box{
+        min-height: 200px;
     }
 }
