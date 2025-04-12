@@ -85,13 +85,13 @@
     position: relative;
 }
 .box2{
+    background-color:  white;
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 129px;
-    height: 78px;
-    background-color: white;
+    width: 125px;
+    height: 75px;
     border-radius: 17px;
     display: flex;
     justify-content: center;
@@ -100,6 +100,7 @@
     font-size:1.2rem;
 }
 .chatbox {
+    cursor: pointer;
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -125,6 +126,12 @@
     background-color: #353535;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 12px;
+    overflow: hidden;
+}
+.messages{
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px;
 }
 .mbox{
     position: absolute;
@@ -179,6 +186,41 @@
     right: 20px;
     z-index: 992;
 }
+.chat.slideup {
+    animation: up 0.4s ease-in forwards;
+  }
+  .chat.slidedown {
+    animation: down 0.4s ease-in forwards;
+  }
+  .chatbox .img2.slideup {
+    animation: up 0.4s ease-in forwards;
+  }
+  .chatbox .img2.slidedown {
+    animation: down 0.4s ease-in forwards;
+  }
+@keyframes up {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes down {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
 @media(max-width:768px) {
     .form1 {
         width: 70%;

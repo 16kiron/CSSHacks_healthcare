@@ -211,7 +211,7 @@ main {
 .desc1 h1 {
   font-size: 3rem;
   font-weight: 500;
-  font-family: Libre Baskerville;
+  font-family: "Libre Baskerville";
   text-align: center;
   max-width: 100%;
 }
