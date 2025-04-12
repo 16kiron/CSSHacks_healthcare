@@ -41,7 +41,15 @@ main .form2 {
     border-radius: 25px;
     background-color: #473243;
 }
-
+main .form2 .button4{
+    width: 25px;
+    height: 25px;
+    background-color: #473243;
+    border: none;
+}
+main .form2 .button4:focus{
+    outline: none;
+}
 main .form2 textarea {
     width: 80%;
     min-height: 40px;
@@ -163,7 +171,9 @@ main .form2 textarea:focus {
     header nav h1 {
         font-size: 2rem;
     }
-
+    main{
+        height: 200px;
+    }
     main .form2 {
         width: 80vw;
         min-height: 30px;
@@ -172,13 +182,13 @@ main .form2 textarea:focus {
     main .form2 textarea {
         width: 70%;
         min-height: 20px;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .report h1{
         font-size: 2rem;
     }
     .report h2{
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     .box{
         min-height: 200px;
